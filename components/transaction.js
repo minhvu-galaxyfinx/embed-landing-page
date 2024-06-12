@@ -24,9 +24,9 @@ function Transaction({ need1, need2, need3 }) {
 
     useEffect(() => {
         AnimScroll(".title2", 100, ".title2")
-        AnimScroll("#list-0", 50, ".play-1")
-        AnimScroll("#list-1", 50, ".play-2")
-        AnimScroll("#list-2", 50, ".play-3")
+        AnimScroll("#list-0", 50, "#list-0")
+        AnimScroll("#list-1", 50, "#list-1")
+        AnimScroll("#list-2", 50, "#list-2")
         AnimScroll("#phone", 300, "#phone")
     }, [])
 

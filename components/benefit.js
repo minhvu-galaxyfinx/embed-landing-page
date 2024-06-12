@@ -28,9 +28,9 @@ function Benefit({ benefit1, benefit2, benefit3 }) {
 
     useEffect(() => {
         AnimScroll(".title", 100, ".title")
-        AnimScroll("#card-0", 100, ".content")
-        AnimScroll("#card-1", 150, ".content")
-        AnimScroll("#card-2", 200, ".content")
+        AnimScroll("#card-0", 50, ".content")
+        AnimScroll("#card-1", 50, ".content")
+        AnimScroll("#card-2", 50, ".content")
     }, [])
 
     return (
