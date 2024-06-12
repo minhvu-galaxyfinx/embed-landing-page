@@ -69,8 +69,14 @@ export default function Home() {
 
       <article style={{ marginTop: 400 }}>
         {/* <Company /> */}
-        <Benefit benefit1={content.benefit1} benefit2={content.benefit2} benefit3={content.benefit3} />
-        <Transaction need1={content.need1} need2={content.need2} need3={content.need3} />
+        {
+          content?.benefit1 && <Benefit benefit1={content.benefit1} benefit2={content.benefit2} benefit3={content.benefit3} />
+        }
+
+        {
+          content?.need1 && <Transaction need1={content.need1} need2={content.need2} need3={content.need3} />
+        }
+
         {/* <Pricing /> */}
         {/* <Review /> */}
         <Newsletter registerTitle={content.registerTitle} registerDescription={content.registerDescription} />
