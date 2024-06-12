@@ -5,7 +5,7 @@ import Newsletter from '../components/newsletter'
 
 import Transaction from '../components/transaction'
 import { useEffect, useState } from 'react'
-import { fetchHomeContent } from "../pages/fetcher/home"
+import { fetchHomeContent } from "../fetcher/home"
 
 const defaultContent = {
   "bannerTitle": "Vikki làm giàu cuộc sống của bạn mỗi ngày",
