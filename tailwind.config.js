@@ -18,7 +18,7 @@ module.exports = {
         email: '450px'
       },
       fontFamily: {
-        Poppins: 'Poppins'
+        // Poppins: 'Poppins'
       },
       backgroundImage: {
         'gradient': 'linear-gradient(150deg, #EE46FE, #C35BFE, #07B8FE, #CBF1FE)',

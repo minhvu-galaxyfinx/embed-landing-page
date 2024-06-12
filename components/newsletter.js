@@ -1,19 +1,36 @@
-import { MailIcon } from "@heroicons/react/outline"
+import { MailIcon, UserIcon, PhoneIcon } from "@heroicons/react/outline"
 
-function Newsletter() {
+function Newsletter({ registerTitle, registerDescription }) {
+    const descriptionLines = registerDescription.split(".") || ["Đăng ký ngay để trở thành người đầu tiên trải nghiệm ứng dụng Vikki bạn nhé!"];
+
     return (
-        <div className="bg-gradient w-full px-8 h-[300px] lg:h-newsletter text-white text-center flex justify-center items-center">
+        <div className="bg-gradient w-full p-8 text-white text-center flex justify-center items-center pb-[200px]">
             <div className="">
-                <h2 className="text-3xl md:text-4xl font-semibold leading-relaxed">Subscribe to our newsletter</h2>
-                <p className="mt-2 text-slate-200 text-base">Get notification about tips, new product and exclusive promo news just for you</p>
-                <div className="bg-white lg:w-email mx-auto mt-8 rounded-xl flex items-center h-16 justify-between pl-6">
-                    <div className="flex items-center h-full">
+                <h2 className="text-3xl md:text-4xl font-semibold leading-relaxed">{registerTitle}</h2>
+                {descriptionLines.map((item, index) => (
+                    <p className="mt-2 text-slate-200 text-base" key={index}>{item}</p>
+                )
+                )}
+                <div className="lg:w-email mx-auto mt-8 h-full space-y-8">
+                    <div className="bg-white rounded-xl p-4 flex items-center">
+                        <label htmlFor="mail">
+                            <UserIcon className="w-6 text-gray-500 mr-2" />
+                        </label>
+                        <input id="mail" className="text-gray-500 outline-none text-sm placeholder-slate-500 h-full w-64 font-medium" type="text" placeholder="Họ tên" />
+                    </div>
+                    <div className="bg-white rounded-xl p-4 flex items-center">
                         <label htmlFor="mail">
                             <MailIcon className="w-6 text-gray-500 mr-2" />
                         </label>
-                        <input id="mail" className="text-gray-500 outline-none text-sm placeholder-slate-500 h-full w-64 font-medium" type="text" placeholder="Enter your email address" />
+                        <input id="mail" className="text-gray-500 outline-none text-sm placeholder-slate-500 h-full w-64 font-medium" type="text" placeholder="Email" />
                     </div>
-                    <button className="bg-midBlue text-white font-medium rounded-xl px-6 transition duration-200 h-14 mr-1 text-sm hover:bg-btnDark">Get started</button>
+                    <div className="bg-white rounded-xl p-4 flex items-center">
+                        <label htmlFor="mail">
+                            <PhoneIcon className="w-6 text-gray-500 mr-2" />
+                        </label>
+                        <input id="mail" className="text-gray-500 outline-none text-sm placeholder-slate-500 h-full w-64 font-medium" type="text" placeholder="Số điện thoại" />
+                    </div>
+                    <button className="bg-purple-500 text-white font-medium rounded-xl px-6 transition duration-200 h-14 mr-1 text-sm hover:bg-btnDark">Đăng kí ngay</button>
                 </div>
             </div>
         </div>
