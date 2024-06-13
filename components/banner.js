@@ -11,7 +11,7 @@ function Banner({ title = "", description = "" }) {
 
     return (
         <div className="w-full xl:w-container px-8 lg:px-20 xl:px-0 mx-auto text-white text-center">
-            <div className="w-full lg:w-4/6 mx-auto pt-[60px]">
+            <div className="w-full lg:w-4/6 mx-auto pt-[120px] md:pt-[60px]">
                 <h1 className="anim-1 text-4xl md:text-5xl font-bold leading-tight md:leading-tight">
                     {title}
                 </h1>
@@ -19,7 +19,7 @@ function Banner({ title = "", description = "" }) {
                     {description}
                 </p>
             </div>
-            <img className="anim-3 mt-10 absolute left-0 right-0 md:relative md:mt-20 shadow-2xl" src="/dashboard.png" alt="software dashboard" />
+            <img className="anim-3 mt-[200px] absolute left-0 right-0 md:relative md:mt-20 shadow-2xl" src="/banner.jpeg" alt="software dashboard" style={{aspectRatio: "2 / 1"}}/>
         </div>
     )
 }

@@ -67,7 +67,7 @@ export default function Home() {
 
 
 
-      <article style={{ marginTop: 400 }}>
+      <article className='mt-[150px] md:mt-[400px]'>
         {/* <Company /> */}
         {
           content?.benefit1 && <Benefit benefit1={content.benefit1} benefit2={content.benefit2} benefit3={content.benefit3} />
